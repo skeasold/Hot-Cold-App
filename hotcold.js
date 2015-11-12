@@ -37,10 +37,38 @@ function check () { //COMPLETE
   }
 }
 function isOverGuess () {
-  console.log("You are over, guess again.");
+  if (guess < randomNumber + 5) {
+    console.log("Call the fire department, you are on fire!");
+  }
+  else if (guess < randomNumber + 10) {
+    console.log("Pretty hot, can you feel your skin tingling?");
+  }
+  else if (guess < randomNumber + 25) {
+    console.log("Getting warmer, put still have a couple guesses to go.");
+  }
+  else if (guess < randomNumber + 50) {
+    console.log("Okay, you can take your jacket off but you are still a ways away.");
+  }
+  else {
+    console.log("Better find a jacket, you might get frostbite.");
+  }
 }
 function isUnderGuess () {
-  console.log ("You are under, guess again.");
+  if (guess > randomNumber - 5) {
+    console.log("Call the fire department, you are on fire!");
+  }
+  else if (guess > randomNumber - 10) {
+    console.log("Pretty hot, can you feel your skin tingling?");
+  }
+  else if (guess > randomNumber - 25) {
+    console.log("Getting warmer, put still have a couple guesses to go.");
+  }
+  else if (guess > randomNumber - 50) {
+    console.log("Okay, you can take your jacket off but you are still a ways away.");
+  }
+  else {
+    console.log("Better find a jacket, you might get frostbite.");
+  }
 }
 function isGuess () {
   console.log ("You got it!")
