@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      var guess = undefined;
+
+      function submit(){
+        if(guess === 100){
+            return 'you got it'
+        }
+        else  if(guess===undefined){
+            console.log('Guess a number');
+        }
+        else{
+            console.log('nope...guess again');
+        }
+      }
+
+      submit()
+
+    </script>
+  </body>
+</html>
