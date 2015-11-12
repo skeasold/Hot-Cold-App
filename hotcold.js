@@ -9,6 +9,7 @@ function randomNumberGenerator () { //COMPLETE
 }
 function guessNumber () { //COMPLETE
   guess = undefined;
+  guessCount = 0
   check();
 }
 function check () { //COMPLETE
@@ -38,41 +39,49 @@ function check () { //COMPLETE
 }
 function isOverGuess () {
   if (guess < randomNumber + 5) {
-    console.log("Call the fire department, you are on fire!");
+    guessCount ++
+    console.log("Call the fire department, you are on fire! You have guessed " + guessCount + " times.");
   }
   else if (guess < randomNumber + 10) {
-    console.log("Pretty hot, can you feel your skin tingling?");
+    guessCount ++
+    console.log("Pretty hot, can you feel your skin tingling? You have guessed " + guessCount + " times.");
   }
   else if (guess < randomNumber + 25) {
-    console.log("Getting warmer, put still have a couple guesses to go.");
+    guessCount ++
+    console.log("Getting warmer, put still have a couple guesses to go. You have guessed " + guessCount + " times.");
   }
   else if (guess < randomNumber + 50) {
-    console.log("Okay, you can take your jacket off but you are still a ways away.");
+    guessCount ++
+    console.log("Okay, you can take your jacket off but you are still a ways away. You have guessed " + guessCount + " times.");
   }
   else {
-    console.log("Better find a jacket, you might get frostbite.");
+    guessCount ++
+    console.log("Better find a jacket, you might get frostbite. You have guessed " + guessCount + " times.");
   }
 }
 function isUnderGuess () {
   if (guess > randomNumber - 5) {
-    console.log("Call the fire department, you are on fire!");
+    guessCount ++
+    console.log("Call the fire department, you are on fire! You have guessed " + guessCount + " times.");
   }
   else if (guess > randomNumber - 10) {
-    console.log("Pretty hot, can you feel your skin tingling?");
+    guessCount ++
+    console.log("Pretty hot, can you feel your skin tingling? You have guessed " + guessCount + " times.");
   }
   else if (guess > randomNumber - 25) {
-    console.log("Getting warmer, put still have a couple guesses to go.");
+    guessCount ++
+    console.log("Getting warmer, put still have a couple guesses to go. You have guessed " + guessCount + " times.");
   }
   else if (guess > randomNumber - 50) {
-    console.log("Okay, you can take your jacket off but you are still a ways away.");
+    guessCount ++
+    console.log("Okay, you can take your jacket off but you are still a ways away. You have guessed " + guessCount + " times.");
   }
   else {
-    console.log("Better find a jacket, you might get frostbite.");
+    guessCount ++
+    console.log("Better find a jacket, you might get frostbite. You have guessed " + guessCount + " times.");
   }
 }
 function isGuess () {
-  console.log ("You got it!")
-}
-function guessCounter () {
-  //NOT COMPLETED!
+  guessCount ++
+  console.log ("You got it! You took " + guessCount + " guesses.")
 }
