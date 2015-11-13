@@ -15,7 +15,10 @@ function guessNumber () {
 }
 function check () {
   if (guess === undefined) {
-    console.log("Guess A Number.");
+    console.log("Guess A Number." +
+     " To view your previous guesses type 'guesses'." +
+     " To guess type guess = # then check ()."
+    );
   }
   else if (isNaN (guess) === true) {
     console.log("That is not a number. Please try again.");
@@ -42,7 +45,7 @@ function check () {
 }
 function isOverGuess () {
   if (guess < randomNumber + 5) {
-    console.log("Call the fire department, you are on fire! You have guessed " + guessCount + " times." + guesses);
+    console.log("Call the fire department, you are on fire! You have guessed " + guessCount + " times.");
   }
   else if (guess < randomNumber + 10) {
     console.log("Pretty hot, can you feel your skin tingling? You have guessed " + guessCount + " times.");
@@ -75,5 +78,6 @@ function isUnderGuess () {
   }
 }
 function isGuess () {
-  console.log ("You got it! You took " + guessCount + " guesses.")
+  console.log ("You got it! You took " + guessCount + " guesses.");
+  startHotCold();
 }
